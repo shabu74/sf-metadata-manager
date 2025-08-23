@@ -1,0 +1,49 @@
+{
+  "name": "salesforce-metadata-manager",
+  "displayName": "Salesforce Metadata Manager",
+  "description": "Manage and retrieve Salesforce metadata components with a visual interface",
+  "version": "1.1.4",
+  "icon": "icon.png",
+  "publisher": "shabu-thomas",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["salesforce", "metadata", "package.xml", "sfdx", "sf cli", "apex", "lightning", "deployment", "retrieve", "components", "manager"],
+  "activationEvents": [
+    "onCommand:salesforce-metadata-manager.openManager"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "salesforce-metadata-manager.openManager",
+        "title": "Open Metadata Manager",
+        "category": "Salesforce"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "salesforce-metadata-manager.openManager",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "echo 'No compilation needed'"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shabu74/sf-metadata-manager.git"
+  },
+  "author": {
+    "name": "Shabu Thomas",
+    "email": "ars.shabu@gmail.com"
+  },
+  "license": "MIT"
+}
